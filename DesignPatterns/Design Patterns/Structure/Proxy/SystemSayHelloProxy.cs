@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Design_Patterns.Structure.Proxy
 {
-    public class SubSystem1Proxy : ISayHello
+    public class SystemSayHelloProxy : ISayHello
     {
-        private readonly ThirdPartySubSystem1 _subSystem1;
-        public SubSystem1Proxy(ThirdPartySubSystem1 subSystem1) 
+        private readonly SystemSayHello _subSystem1;
+        public SystemSayHelloProxy(SystemSayHello subSystem1) 
         {
             _subSystem1 = subSystem1;
         }

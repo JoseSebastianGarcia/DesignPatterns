@@ -1,5 +1,4 @@
 ﻿using DesignPatterns.Views;
-using DesignPatterns.Views;
 
 public class Program 
 {

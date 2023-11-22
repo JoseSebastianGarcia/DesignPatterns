@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Design_Patterns.Structure.Proxy
 {
-    public class ThirdPartySubSystem1 : ISayHello
+    public class SystemSayHello : ISayHello
     {
         public string GetHello() => "Hello";
     }

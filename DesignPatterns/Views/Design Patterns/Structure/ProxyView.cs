@@ -14,12 +14,12 @@ namespace DesignPatterns.Views.Design_Patterns.Structure
         {
             Console.Clear();
 
-            ThirdPartySubSystem1 s1 = new ThirdPartySubSystem1();
+            SystemSayHello s1 = new SystemSayHello();
             Console.WriteLine($"Sin proxy: {s1.GetHello()}");
 
             Console.WriteLine();
 
-            SubSystem1Proxy sp1 = new SubSystem1Proxy(s1);
+            SystemSayHelloProxy sp1 = new SystemSayHelloProxy(s1);
             Console.WriteLine($"Con proxy: {sp1.GetHello()}");
 
             Console.ReadKey();
