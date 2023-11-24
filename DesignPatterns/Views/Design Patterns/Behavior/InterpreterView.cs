@@ -26,12 +26,12 @@ namespace DesignPatterns.Views.Design_Patterns.Behavior
                             new VariableExpression("number5")));
 
             Context context = new Context();
-            context.AddVariable("number1", 10);
-            context.AddVariable("number2", 9);
-            context.AddVariable("number3", 19);
-
-            context.AddVariable("number4", 100);
-            context.AddVariable("number5", 100);
+            context
+                .AddVariable("number1", 10)
+                .AddVariable("number2", 9)
+                .AddVariable("number3", 19)
+                .AddVariable("number4", 100)
+                .AddVariable("number5", 100);
 
             bool result = expression.Interpret(context);
 

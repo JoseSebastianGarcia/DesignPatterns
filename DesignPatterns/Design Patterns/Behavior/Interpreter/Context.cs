@@ -4,10 +4,12 @@
     {
         private readonly Dictionary<string, int> _variables = new Dictionary<string, int>();
         
-        public void AddVariable(string name, int value) 
+        public Context AddVariable(string name, int value) 
         {
             if(!_variables.ContainsKey(name))
                 _variables.Add(name, value);
+
+            return this;
         }
         public int GetVariable(string name) 
         {
