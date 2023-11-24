@@ -25,6 +25,7 @@ namespace DesignPatterns.Views
             Console.WriteLine("1. Chain of Responsibility");
             Console.WriteLine("2. Strategy");
             Console.WriteLine("3. Command");
+            Console.WriteLine("4. Interpreter");
             Console.WriteLine("9. Volver");
             Console.WriteLine("==========================");
             Console.Write("Seleccione una opción: ");
@@ -52,6 +53,14 @@ namespace DesignPatterns.Views
                 case ConsoleKey.D3:
                     {
                         view = new CommandView();
+                        view.Render();
+
+                        this.Render();
+                        break;
+                    }
+                case ConsoleKey.D4:
+                    {
+                        view = new InterpreterView();
                         view.Render();
 
                         this.Render();
