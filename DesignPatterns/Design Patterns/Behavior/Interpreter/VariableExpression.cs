@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Design_Patterns.Behavior.Interpreter
 {
-    public class VariableExpression : IExpression
+    public class VariableExpression : IIntegerExpression
     {
         private readonly string _variable;
         public int Interpret(Context context)

@@ -13,20 +13,29 @@ namespace DesignPatterns.Views.Design_Patterns.Behavior
         {
             Console.Clear();
 
-            IExpression expression = new AddExpression(
-                new AddExpression(
-                    new VariableExpression("number1"), 
-                    new VariableExpression("number2")), 
-                new VariableExpression("number3"));
+
+            IBooleanExpression expression = new AndExpression(
+                    new EqualExpression(
+                            new AddExpression(
+                                new VariableExpression("number1"),
+                                new VariableExpression("number2")
+                                ),
+                            new VariableExpression("number3")),
+                    new EqualExpression(
+                            new VariableExpression("number4"),
+                            new VariableExpression("number5")));
 
             Context context = new Context();
             context.AddVariable("number1", 10);
             context.AddVariable("number2", 9);
-            context.AddVariable("number3", 15);
+            context.AddVariable("number3", 19);
 
-            int result = expression.Interpret(context);
+            context.AddVariable("number4", 100);
+            context.AddVariable("number5", 100);
 
-            Console.WriteLine($"Y el resultado de '(10 + 9) + 15' es ({result} == 34).");
+            bool result = expression.Interpret(context);
+
+            Console.WriteLine($" (10+9) == 19 y 100 == 100 debería ser True y es {result}.");
 
             Console.ReadKey();
         }
