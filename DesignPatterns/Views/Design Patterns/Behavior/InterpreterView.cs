@@ -13,7 +13,7 @@ namespace DesignPatterns.Views.Design_Patterns.Behavior
         {
             Console.Clear();
 
-            AddExpression expression = new AddExpression(
+            IExpression expression = new AddExpression(
                 new AddExpression(
                     new VariableExpression("number1"), 
                     new VariableExpression("number2")), 
