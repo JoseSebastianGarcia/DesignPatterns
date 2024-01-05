@@ -24,6 +24,7 @@ namespace DesignPatterns.Views
             Console.WriteLine("1. Singleton");
             Console.WriteLine("2. Prototype");
             Console.WriteLine("3. Builder");
+            Console.WriteLine("4. Fluent Api");
             Console.WriteLine("9. Volver");
             Console.WriteLine("==========================");
             Console.Write("Seleccione una opción: ");
@@ -51,6 +52,14 @@ namespace DesignPatterns.Views
                 case ConsoleKey.D3:
                     {
                         view = new BuilderView();
+                        view.Render();
+
+                        this.Render();
+                        break;
+                    }
+                case ConsoleKey.D4:
+                    {
+                        view = new FluentApiView();
                         view.Render();
 
                         this.Render();
