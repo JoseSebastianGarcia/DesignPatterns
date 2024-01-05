@@ -27,6 +27,7 @@ namespace DesignPatterns.Views
             Console.WriteLine("3. Command");
             Console.WriteLine("4. Interpreter");
             Console.WriteLine("5. Visitor");
+            Console.WriteLine("6. Template Method");
             Console.WriteLine("9. Volver");
             Console.WriteLine("==========================");
             Console.Write("Seleccione una opción: ");
@@ -70,6 +71,14 @@ namespace DesignPatterns.Views
                 case ConsoleKey.D5:
                     {
                         view = new VisitorView();
+                        view.Render();
+
+                        this.Render();
+                        break;
+                    }
+                case ConsoleKey.D6:
+                    {
+                        view = new TemplateMethodView();
                         view.Render();
 
                         this.Render();
